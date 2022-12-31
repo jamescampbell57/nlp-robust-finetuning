@@ -1,0 +1,14 @@
+
+test_splits:
+    - "baby_val"
+    - "shoes_val"
+    - "clothes_val"
+    - "music_val"
+    - "video_val"
+
+num_classes: 5
+
+n_train: 10000
+n_val: 5000
+
+dataset_name: "Amazon"

@@ -1,0 +1,14 @@
+
+test_splits:
+    - "letters"
+    - "facetoface"
+
+num_classes: 3
+
+n_train: "N/A"
+n_val: "N/A"
+
+dataset_name: "MNLI_2"
+
+#data_dir: '/home/ubuntu/robust-finetuning/data'
+#have to change in dataset class

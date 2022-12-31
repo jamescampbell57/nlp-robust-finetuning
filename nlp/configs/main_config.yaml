@@ -1,0 +1,63 @@
+
+inherit:
+    - amazon.yaml
+#options include amazon.yaml, mnli_1.yaml, mnli_2.yaml, sst2_imdb.yaml, stsb.yaml, yelp.yaml, hp_bert.yaml
+
+model_name: "BERT"
+#options include ... BERT, GPT2, RoBERTa, SBERT
+
+pretrained_checkpoint_path: #'/home/ubuntu/robust-finetuning/data/gpt_brain' #BRAIN
+#'/home/ubuntu/robust-finetuning/data/bert_checkpoints/checkpoint_13'
+#'/home/ubuntu/robust-finetuning/brain/results/gpt_ex0/checkpoint-406'
+
+algorithm: "LP_WiSE_FT" 
+#options include ... "finetuning", "linear probing", "LPFT", "FTLP", "WiSE_FT", "LP_WiSE_FT", "RIFT"
+
+
+weights_save_path: '/home/ubuntu/nlp-robust-finetuning/data/bert_checkpoints'
+
+optional_description: 'LP_WiSE_FT test run'  #CHECKPOINT STATUS
+logits: False
+
+#finetuning settings
+learning_rate_space:
+    - .00001
+    #- .00005
+    #- .000005
+batch_size_space:
+    #- 1
+    #- 4
+    - 8
+num_epochs: 15
+
+
+#linear probing settings
+start_C: -7
+end_C: 3
+num_Cs: 150
+max_iter: 2000
+
+
+#LPFT settings
+optimal_C: .094
+
+#FTLP settings
+num_iterations_per_save: 110
+obtain_checkpoints: False
+
+#WiSE_FT settings
+wise_epoch: 10
+wise_iteration: 'last'
+
+start_alpha: 0
+end_alpha: 1
+num_alphas: 21
+
+
+#LP_WiSE_FT settings
+#inherit wise_epoch, wise_iteration, alphas, optimal_C
+
+wandb_username: 'jgc239'
+wandb_project: 'robust-finetuning-experiments'
+
+

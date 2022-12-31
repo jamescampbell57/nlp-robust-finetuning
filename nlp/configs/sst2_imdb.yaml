@@ -1,0 +1,11 @@
+
+test_splits:
+    - "imdb_val"
+    - "sst2_val"
+
+num_classes: 2
+
+n_train: 10000
+n_val: 5000
+
+dataset_name: "SST2_IMDB"

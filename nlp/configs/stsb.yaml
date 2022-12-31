@@ -1,0 +1,10 @@
+
+test_splits:
+    -
+
+num_classes:
+
+n_train:
+n_val:
+
+dataset_name: "STSB"

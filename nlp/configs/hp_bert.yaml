@@ -1,0 +1,12 @@
+
+test_splits:
+    - "test"
+
+num_classes: 25003
+#for subject 'K'
+
+n_train: "N/A"
+
+n_val: "N/A"
+
+dataset_name: "HarryPotter"

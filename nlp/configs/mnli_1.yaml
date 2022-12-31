@@ -1,0 +1,14 @@
+
+test_splits:
+    - "matched"
+    - "mismatched"
+
+num_classes: 3
+
+n_train: 10000
+n_val: 5000
+
+dataset_name: "MNLI_1"
+
+#data_dir: '/home/ubuntu/robust-finetuning/data'
+#have to change in dataset class
